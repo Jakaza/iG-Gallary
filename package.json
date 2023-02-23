@@ -1,0 +1,19 @@
+{
+  "name": "ig-gallary",
+  "version": "1.0.0",
+  "description": "Cloud Storage\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DImage\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\"Image Cloud Storage\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jakaza/iG-Gallary.git"
+  },
+  "author": "Jakaza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jakaza/iG-Gallary/issues"
+  },
+  "homepage": "https://github.com/Jakaza/iG-Gallary#readme"
+}
