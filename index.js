@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
     })
 })
 
+app.get("/api/image", (req, res) => {
+    res.status(200).json({
+        message: "Get All Images"
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server runing at port ${PORT}`);
