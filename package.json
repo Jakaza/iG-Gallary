@@ -4,6 +4,8 @@
   "description": "Cloud Storage\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DImage\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\"Image Cloud Storage\"",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "run": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
