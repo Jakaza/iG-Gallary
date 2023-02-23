@@ -1,17 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const { getAllImages,
+    getSingleImage } = require("./controller")
 
-router.get("/all-images", (req, res) => {
-    res.status(200).json({
-        message: "Get All Images"
-    })
-})
+router.get("/all-images",)
 
-router.get("/:imageID", (req, res) => {
-    res.status(200).json({
-        message: "Get All Images"
-    })
-})
+router.get("/:imageID",)
 
 router.post("/upload-image", (req, res) => {
     res.status(200).json({
