@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const cloudinary = require('cloudinary').v2;
+const db = require('../config/dbConnection');
 
 // Configuration 
 cloudinary.config({
@@ -10,8 +11,7 @@ cloudinary.config({
 });
 
 router.post("/upload-image", async (req, res) => {
-    const data = req.body;
-    const imagePath = data.path;
+    const image_data = req.body;
 
     const options = {
         use_filename: true,
@@ -31,6 +31,49 @@ router.post("/upload-image", async (req, res) => {
     } catch (error) {
         console.log(error);
     }
+
+
+
+
+
+
+    db.pool.connect(async (error, client) => {
+
+        // console.log(client);
+        // const insertSQL = 'INSERT INTO igimages ( public_id, title, width, height, image_url) VALUES($1, $2, $3, $4, $5) RETURNING *';
+        // const values = ['public 2', 'title 2', 40, 60, 'image_url2'];
+
+        // try {
+        //     const formData = await client.query(insertSQL, values)
+
+        //     console.log(formData);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+
+
+
+        // client.query(insertSQL, values).then((tData) => {
+        //     console.log(tData);
+        // }).catch((error) => {
+        //     console.log(error);
+        // })
+
+
+    })
+
+    // try {
+    //     const imageReq = await cloudinary.uploader.upload(imagePath, options)
+    //     const resData = await imageReq;
+
+
+
+
+    //     console.log(resData);
+    //     console.log(resData.secure_url);
+    // } catch (error) {
+    //     console.log(error);
+    // }
 
     res.status(200).json({
         message: "Upload New Image",
