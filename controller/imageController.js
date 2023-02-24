@@ -4,14 +4,7 @@ const getAllImages = (req, res) => {
     })
 }
 
-const getSingleImage = (req, res) => {
-    res.status(200).json({
-        message: "Get All Images"
-    })
-}
-
 
 module.exports = {
-    getAllImages,
-    getSingleImage
+    getAllImages
 }

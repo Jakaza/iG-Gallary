@@ -1,20 +1,14 @@
+require("dotenv").config();
 const express = require("express")
 const app = express();
-require("dotenv").config();
+const bodyParser = require("body-parser");
 const PORT = process.env.PORT_NO | 3000;
-
-
-app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "This is home page"
-    })
-})
-
-app.get("/api/image", (req, res) => {
-    res.status(200).json({
-        message: "Get All Images"
-    })
-})
+const router = require("./routes/imageRoute")
+//parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application / json
+app.use(bodyParser.json())
+app.use("/", router)
 
 app.listen(PORT, () => {
     console.log(`Server runing at port ${PORT}`);
