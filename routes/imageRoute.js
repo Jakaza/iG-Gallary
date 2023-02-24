@@ -9,13 +9,32 @@ cloudinary.config({
     api_secret: process.env.C_API_SECRET
 });
 
+router.post("/upload-image", async (req, res) => {
+    const data = req.body;
+    const imagePath = data.path;
 
-router.post("/upload-image", (req, res) => {
+    const options = {
+        use_filename: true,
+        unique_filename: false,
+        overwrite: true
+    }
+
+    try {
+        const imageReq = await cloudinary.uploader.upload(imagePath, options)
+        const resData = await imageReq;
 
 
+
+
+        console.log(resData);
+        console.log(resData.secure_url);
+    } catch (error) {
+        console.log(error);
+    }
 
     res.status(200).json({
-        message: "Upload New Image"
+        message: "Upload New Image",
+        imagePath
     })
 })
 
