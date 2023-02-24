@@ -3,6 +3,9 @@ const router = express.Router();
 
 
 router.post("/upload-image", (req, res) => {
+
+
+
     res.status(200).json({
         message: "Upload New Image"
     })
