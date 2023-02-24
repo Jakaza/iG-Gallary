@@ -63,8 +63,19 @@ router.delete("/delete-image", (req, res) => {
 })
 
 router.get("/all-images", (req, res) => {
-    res.status(200).json({
-        message: "Get All Images"
+    db.pool.connect(async (error, client) => {
+        const querySQL = 'SELECT public_id, title, image_url FROM igimages';
+
+        try {
+            const data = await client.query(querySQL)
+
+            res.status(200).json({
+                status: "success",
+                data: data.rows
+            })
+        } catch (error) {
+            console.log(error);
+        }
     })
 })
 
