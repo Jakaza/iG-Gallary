@@ -14,3 +14,15 @@
 - Express, is a back end web application framework for building RESTful APIs with Node.js
 - (And some Dependencies)
 - Postgres is a database, widely used for accessing querying, updating, and managing data in databases.
+
+## Installation
+
+Node.js installtion [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd < prject name here >
+npm i
+node app
+```
