@@ -2,31 +2,28 @@
 class ImageModel{
 
   constructor(){
-
+    //This is the constructor for init values
     
   }
 
-  save(){
-
+  static save(){
+    // This is the function to save data to database
   }
 
   getImage(){
-    
+    // This is the function to get each image by its ID uniques value
   }
 
-  getALLImages(){
-
+  static getALLImages(){
+    // This function is use to query all existing immages in the db
  
   }
 
-  deleteImage(){
-
-
-    
+  static deleteImage(){
+    // The function to delete from the database.
+ 
   }
 
-
-  
 }
 
 
